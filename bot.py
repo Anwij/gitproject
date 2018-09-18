@@ -1,5 +1,6 @@
 import telepot
 import requests
+import django
 from time import sleep
 
 url = r'https://api.telegram.org/bot637861645:AAEYDWviuBn8KpSDp6Un_copMZTeevecDFw/'
