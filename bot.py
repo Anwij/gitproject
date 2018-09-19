@@ -35,6 +35,12 @@ def send_mess(chat, text):
 def main():
 	a = 0
 	bot = telebot.TeleBot(token)
+	markup = telebot.types.ReplyKeyboardMarkup()
+	markup.row('Прайс')
+	markup.row('Работа', 'Информация')
+	markup.row('Оплатил "получить товар"', 'Отмена заказа')
+	bot.send_message(get_chat_id(last_update(get_updates_json(url))), 'd', reply_markup=markup)
+	
 	bot.send_message(get_chat_id(last_update(get_updates_json(url))), 
 			'hello')
 	update_id = last_update(get_updates_json(url))['update_id']
