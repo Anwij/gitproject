@@ -8,8 +8,9 @@ token = '637861645:AAEYDWviuBn8KpSDp6Un_copMZTeevecDFw'
 
 
 def get_updates_json(request):
-	params = {'timeout': 100, 'offset': None}
-	response = requests.get(request + 'getUpdates', data=params)
+	#params = {'timeout': 100, 'offset': None}
+	#response = requests.get(request + 'getUpdates', data=params)
+	response = requests.get(request + 'getUpdates')
 	return response.json()
 	
 def last_update(data):
