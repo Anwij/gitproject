@@ -46,11 +46,11 @@ def main():
 			update_id = var + 1
 			send_mess(get_chat_id(last_update(get_updates_json(
 					url))),	var)
-		
+		'''
 		bot.send_message(get_chat_id(last_update(get_updates_json(url))), 
 			'hello' + str(a))
 		a += 1
-		'''
+		
 		sleep(3)
 	
 if __name__ == '__main__':
