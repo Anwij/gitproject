@@ -1,4 +1,4 @@
-import telepot
+
 import requests
 import django
 from time import sleep
@@ -6,7 +6,6 @@ from time import sleep
 url = r'https://api.telegram.org/bot637861645:AAEYDWviuBn8KpSDp6Un_copMZTeevecDFw/'
 token = '637861645:AAEYDWviuBn8KpSDp6Un_copMZTeevecDFw'
 
-TelegramBot = telepot.Bot(token)
 
 def get_updates_json(request):
 	params = {'timeout': 100, 'offset': None}
