@@ -39,7 +39,7 @@ def main():
 		if update_id <= var:
 			update_id = var + 1
 			send_mess(get_chat_id(last_update(get_updates_json(
-					url))),	'test')
+					url))),	var)
 	sleep(1)
 	
 if __name__ == '__main__':
