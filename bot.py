@@ -44,10 +44,7 @@ def main():
 	bot.send_message(get_chat_id(last_update(get_updates_json(url))), 
 			'hello')
 	update_id = last_update(get_updates_json(url))['update_id']
-	
 	while True:
-<<<<<<< HEAD
-=======
 		'''
 		var = last_update(get_updates_json(url))['update_id'] 
 		if update_id <= var:
@@ -58,8 +55,6 @@ def main():
 		bot.send_message(get_chat_id(last_update(get_updates_json(url))), 
 			'hello' + str(a))
 		a += 1
-		
->>>>>>> ee4739704af14f0e9751fdf66addc30f5de67e2e
 		sleep(3)
 	
 if __name__ == '__main__':
