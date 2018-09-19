@@ -1,4 +1,4 @@
-
+import telebot
 import requests
 import django
 from time import sleep
@@ -33,14 +33,23 @@ def send_mess(chat, text):
 
 
 def main():
+	a = 0
+	bot = telebot.TeleBot(token)
+	bot.send_message(get_chat_id(last_update(get_updates_json(url))), 
+			'hello')
 	update_id = last_update(get_updates_json(url))['update_id']
 	while True:
+		'''
 		var = last_update(get_updates_json(url))['update_id'] 
 		if update_id <= var:
 			update_id = var + 1
 			send_mess(get_chat_id(last_update(get_updates_json(
 					url))),	var)
-	sleep(1)
+		'''
+		bot.send_message(get_chat_id(last_update(get_updates_json(url))), 
+			'hello' + str(a))
+		a += 1
+		sleep(3)
 	
 if __name__ == '__main__':
 	main()
